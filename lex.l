@@ -13,17 +13,17 @@ not             ("not")|(\!)
 implies         ("implies")|(\-\>)
 double_implies  ("double_implies")|(\<\-\>)
 assign          (\=)
-string_constant (\")+([^\n])*(\")+
+string_constant (\")+(.)*(\")+
 variable        {letter}+({letter}*{digit}*(\_)*)*
 comment         (\#)+([^\n])*
 %%
 \;                  printf("SC ");
 \(                  printf("LP ");
 \)                  printf("RP ");
-\{                  printf("LCP ");
-\}                  printf("RCP ");
-\[                  printf("LSP ");
-\]                  printf("RSP ");
+\{                  printf("LCB ");
+\}                  printf("RCB ");
+\[                  printf("LSB ");
+\]                  printf("RSB ");
 \:                  printf("COLON ");
 \%                  printf("PERCENT ");
 \,                  printf("COMMA ");
