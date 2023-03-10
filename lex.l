@@ -4,14 +4,14 @@ digit           [0-9]
 true            ("true")
 false           ("false")
 bool            {true}|{false}
-type            ("bool")
+type            ("bool")|("void")
 for_each        ("for each")
 operations      {and}|{or}|{not}|{implies}|{double_implies}
-and             ("and")|(\%\%)
+and             ("and")|(\&\&)
 or              ("or")|(\|\|)
 not             ("not")|(\!)
 implies         ("implies")|(\-\>)
-double_implies  ("double_implies")|(\<\-\>)
+double_implies  ("double-implies")|(\<\-\>)
 assign          (\=)
 string_constant (\")+(.)*(\")+
 variable        {letter}+({letter}*{digit}*(\_)*)*
