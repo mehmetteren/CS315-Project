@@ -1,3 +1,4 @@
+#sample test program 2
 func void foo(p, q, r) {
 	bool result;
 

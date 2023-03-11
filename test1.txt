@@ -1,0 +1,14 @@
+#test program 1
+bool a, b;
+bool arr[];
+arr = [ a, b, a and b, a or b, a implied b, a double-implies b];
+
+
+for each item in arr {
+if (item -> true) {
+	result = !( a &&  b) <-> item;
+	print("result is: ", result);
+} else 
+	result = b ||  item
+print("result is: ", result);
+}

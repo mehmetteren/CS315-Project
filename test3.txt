@@ -1,0 +1,20 @@
+#test program 3
+bool myList[];
+bool a1,a2,b1,b1_a;
+myList = [a1,a2,b1,b1_a];
+
+for each var in myList{
+    print("Please enter a value(true/false): ");
+    input(var);
+}
+
+func void printDImplies(var1,var2){
+    print("First variable: ",var1,"\nSecond variable: ",var2);
+    print("Var1 <-> Var2 : ",var1," <-> ",var2," = ",var1<->var2);
+}
+
+for each var1 in myList{
+    for each var2 in myList{
+        printDImplies(var1,var2);
+    }
+}
