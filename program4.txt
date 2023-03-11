@@ -1,4 +1,4 @@
-#test program 2
+# Program 4
 bool a;
 bool b;
 bool c;
