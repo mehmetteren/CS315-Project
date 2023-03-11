@@ -1,3 +1,4 @@
+#bonus test program
 if (p implies q){ x = false; print("OK");}
 bool a, b, c;
 bool trial_variable1;

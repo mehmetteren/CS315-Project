@@ -1,0 +1,25 @@
+#test program 4
+func bool foo( a, b, c) {
+	while a <-> b {
+		if (b double-implies  c) {
+			c = !c;
+		} else {
+			b = !b;
+		}
+    }
+    return a && b;
+}
+
+bool x, y, z, k, l;
+print("Enter the values of  x, y, z: ");
+input(x, y, z);
+
+k = foo(x, y, z)
+
+if k {
+	l = x -> z;
+	print("the value of l is: ", l);
+} else {
+l = (x <-> z) && (x || y);
+	print("the value of l is: ", l);
+}

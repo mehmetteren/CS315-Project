@@ -1,3 +1,4 @@
+#test program 2
 bool a;
 bool b;
 bool c;
