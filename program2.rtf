@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Georgia-Bold;\f1\fnil\fcharset0 Georgia;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl264\slmult1\partightenfactor0
+
+\f0\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+Program 2
+\f1\b0 \
+func void foo(p, q, r) \{\
+	bool result;\
+\
+	print(\'93function name: foo\'94);\
+	print(\'93p: \'94); print(p);\
+	print(\'93q: \'94); print(q);\
+	print(\'93r: \'94); print(r);\
+\
+	if r \{\
+		result = p -> (q or r);\
+	\} else \{\
+		result = q <-> r;\
+	return result;\
+\} \
+bool c;\
+foreach a in [true, false] \{\
+	foreach b in [true, false] \{\
+		c = foo(a, b, false);\
+		print(a); print(b); print(c);\
+	\}\
+\}\
+
+\f2 \
+}
