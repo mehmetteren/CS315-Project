@@ -1,0 +1,30 @@
+if (p implies q){ x = false; print("OK");}
+bool a, b, c;
+bool trial_variable1;
+
+trial_variable1 = true;
+
+trial_variable2 = true;
+
+if (a double-implies b) { trial_variable1 = false; } else if ( a implies c ) { trial_variable1 = false; } else { print(trial_variable1); }
+
+while a && b { print("a and b are true"); }
+
+bool turn1 = true;
+bool turn2 = true;
+bool turn3 = true;
+while turn1 or turn2 || turn3 {
+if !(turn1 || turn2)  {turn3 = false;}
+	if turn1 { if (!turn1) {turn2 = false;} turn1 = false; }	
+}
+
+
+for each var in array234 { print(var); }
+
+func bool func1 (a, b) {return a and b;}
+func void func3 () {print("Is everything ok?");}
+
+if funct1(a,b) {print("Can func_call works ");}
+
+bool array1[];
+Array1 = [true, false, a || b];

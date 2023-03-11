@@ -1,0 +1,22 @@
+func void foo(p, q, r) {
+	bool result;
+
+	print(“function name: foo”);
+	print(“p: ”); print(p);
+	print(“q: ”); print(q);
+	print(“r: ”); print(r);
+
+	if r {
+		result = p -> (q or r);
+	} else {
+		result = q <-> r;
+    }
+	return result;
+}
+bool c;
+foreach a in [true, false] {
+	foreach b in [true, false] {
+		c = foo(a, b, false);
+		print(a); print(b); print(c);
+	}
+}

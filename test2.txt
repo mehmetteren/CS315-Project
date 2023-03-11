@@ -1,0 +1,17 @@
+bool a;
+bool b;
+bool c;
+input(a,b,c); #user define a,b,c values
+
+while(a){
+    print("Are the doors closed?)
+    print("First door: ",c);
+    print("Second door: ",b);
+    print("Last door: ",a);
+    if(c == true){
+        c = false;
+    } else if(b){
+        b = false;
+    } else { a = false;}
+}
+print("All doors are now open!");

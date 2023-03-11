@@ -13,7 +13,7 @@ not             ("not")|(\!)
 implies         ("implies")|(\-\>)
 double_implies  ("double-implies")|(\<\-\>)
 assign          (\=)
-string_constant (\")+(.)*(\")+
+string_constant ((\")+(.)*(\")+)|((\“)+(.)*(\”)+)
 variable        {letter}+({letter}*{digit}*(\_)*)*
 comment         (\#)+([^\n])*
 %%
@@ -43,6 +43,8 @@ comment         (\#)+([^\n])*
 \|                  printf("OR ");
 \^                  printf("CARET ");
 \~                  printf("TILDE ");
+\=\=                printf("EQUAL ");
+\!\=                printf("NOT_EQUAL ");
 if                  printf("IF ");
 in                  printf("IN ");
 else                printf("ELSE ");
