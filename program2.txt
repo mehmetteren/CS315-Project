@@ -3,9 +3,9 @@ func void foo(p, q, r) {
 	bool result;
 
 	print(“function name: foo”);
-	print(“p: ”); print(p);
-	print(“q: ”); print(q);
-	print(“r: ”); print(r);
+	print(“p: ”, p);
+	print(“q: ”, q);
+	print(“r: ”, r);
 
 	if r {
 		result = p -> (q or r);
@@ -18,6 +18,8 @@ bool c;
 foreach a in [true, false] {
 	foreach b in [true, false] {
 		c = foo(a, b, false);
-		print(a); print(b); print(c);
+		print(“a: ”, a);
+		print(“b: ”, b);
+		print(“c: ”, c);
 	}
 }
