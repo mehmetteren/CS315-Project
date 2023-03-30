@@ -6,7 +6,7 @@ bool c;
 input(a,b,c); #user define a,b,c values
 
 while(a){
-    print("Are the doors closed?);
+    print("Are the doors closed?");
     print("First door: ",c);
     print("Second door: ",b);
     print("Last door: ",a);
