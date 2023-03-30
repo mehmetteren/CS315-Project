@@ -1,3 +1,4 @@
+begin;
 # Program 2
 func void foo(p, q, r) {
 	bool result;
@@ -23,3 +24,4 @@ foreach a in [true, false] {
 		print(“c: ”, c);
 	}
 }
+end;
