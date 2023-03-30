@@ -5,10 +5,53 @@
 	#include <stdio.h>
 	int lineno;
 %}
+%token BEGIN END RETURN BREAK BOOL ASSIGN
 %token SC LP RP LCB RCB LSB RSB COLON PERCENT COMMA DOT DOLLOR AND LB RB
 %token STAR PLUS MINUS US SLASH BSLASH QMARK AT OR CARET TILDE EQUAL NOT_EQUAL
 %token IF IN ELSE WHILE FUNC INPUT VOID
+
+%start program
 %%
+
+/* INITIAL PROGRAM */
+program:
+	BEGIN SC statement_list END SC {printf("\rProgram is valid.\n");};
+
+statement_list:	statement
+	|	statement statement_list
+	;
+
+statement:	declaration
+	|	assignment
+	|	if_statement
+	|	loop_statement
+	|	output_statement
+	|	input_statement
+	|	function_signature
+	|	LINE_COMMENT
+	|	end_statement
+	;
+
+end_statement:	BREAK SC
+	|	RETURN bool_expression SC
+	|	RETURN array SC
+	;
+
+/* DECLARATION & ASSIGNMENT*/
+declaration:	BOOL variable_list SC
+	|	BOOL assignment SC
+	|	BOOL variable_name LSB RSB SC
+	|	function_declaration
+	;
+
+assignment:	bool_assignment
+	|	array_assignment
+	;
+
+bool_assignment:	variable_name ASSIGN bool_expression SC;
+
+array_assignment:	variable_name ASSIGN array SC;
+
 /* EXPRESSIONS */ 
 bool_expressions:	bool_expression 
 		| 	bool_expression COMMA bool_expressions
