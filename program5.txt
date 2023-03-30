@@ -9,8 +9,9 @@ for each item in arr {
 if (item -> true) {
 	result = !( a &&  b) <-> item;
 	print("result is: ", result);
-} else 
-	result = b ||  item
+} else {
+	result = b || item ;
+}
 print("result is: ", result);
 }
 end;
