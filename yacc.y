@@ -37,7 +37,7 @@ end_statement:	BREAK SC
 
 /* DECLARATION & ASSIGNMENT*/
 declaration:	BOOL_TYPE variable_list SC // BOOL means "true" or "false", does not mean "bool"
-	|	BOOL_TYPE assignment SC
+	|	BOOL_TYPE assignment
 	|	BOOL_TYPE variable_name LSB RSB SC
 	|	function_declaration
 
