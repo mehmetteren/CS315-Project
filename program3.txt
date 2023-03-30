@@ -1,3 +1,4 @@
+begin;
 # Program3
 
 func bool foo( a, b, c) {
@@ -24,4 +25,4 @@ if k {
 l = (x <-> z) && (x || y);
 	print("the value of l is: ", l);
 }
-
+end;
