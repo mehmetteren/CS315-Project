@@ -28,11 +28,11 @@ comment         (\#)+([^\n])*
 \%                  return(PERCENT);
 \,                  return(COMMA);
 \.                  return(DOT);
-\$                  return(DOLLOR);
-\&                  return(AND);
+\$                  return(DOLLAR);
+\&                  return(AMPERSAND);
 \<                  return(LB);
 \>                  return(RB);
-\*                  return(START);
+\*                  return(STAR);
 \+                  return(PLUS);
 \-                  return(MINUS);
 \_                  return(US);
@@ -40,7 +40,7 @@ comment         (\#)+([^\n])*
 \\                  return(BSLASH);
 \?                  return(QMARK);
 \@                  return(AT);
-\|                  return(OR);
+\|                  return(PIPE);
 \^                  return(CARET);
 \~                  return(TILDE);
 \=\=                return(EQUAL);
