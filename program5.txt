@@ -1,3 +1,4 @@
+begin;
 #test program 1
 bool a, b;
 bool arr[];
@@ -12,3 +13,4 @@ if (item -> true) {
 	result = b ||  item
 print("result is: ", result);
 }
+end;
