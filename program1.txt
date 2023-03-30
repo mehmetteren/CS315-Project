@@ -1,3 +1,4 @@
+begin;
 # Program 1
 print(“ Enter values for x, y, z (ex: $true true false) ”);
 input(x, y, z);
@@ -7,3 +8,4 @@ while x and y and z {
 }
 bool result = (x -> y) and (!x <-> z);
 print(result);
+end;
