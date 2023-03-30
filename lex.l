@@ -15,6 +15,7 @@ operations      {and}|{or}|{not}|{implies}|{double_implies}
 and             ("and")|(\&\&)
 or              ("or")|(\|\|)
 not             ("not")|(\!)
+newline         \n
 implies         ("implies")|(\-\>)
 double_implies  ("double-implies")|(\<\-\>)
 assign          (\=)
@@ -75,6 +76,7 @@ print               return PRINT;
 {variable}          return VAR;
 {comment}           return COMMENT;
 {string_constant}   return STRING_CONSTANT;
+{newline}           ;
 [ \t]               ;
 %%
 int yywrap(){return 1;}
