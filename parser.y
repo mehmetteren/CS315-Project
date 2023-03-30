@@ -28,7 +28,7 @@ statement:	declaration
 	|	output_statement
 	|	input_statement
 	|	function_signature
-	|	LINE_COMMENT
+	|	COMMENT
 	|	end_statement
 	;
 
@@ -38,7 +38,7 @@ end_statement:	BREAK SC
 	;
 
 /* DECLARATION & ASSIGNMENT*/
-declaration:	BOOL variable_list SC
+declaration:	BOOL variable_list SC // BOOL means "true" or "false", does not mean "bool"
 	|	BOOL assignment SC
 	|	BOOL variable_name LSB RSB SC
 	|	function_declaration

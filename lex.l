@@ -17,6 +17,7 @@ string_constant ((\")+(.)*(\")+)|((\“)+(.)*(\”)+)
 variable        {letter}+({letter}*{digit}*(\_)*)*
 comment         (\#)+([^\n])*
 %%
+\n                  { extern int yylineno; yylineno++; return(NL);};
 \;                  return(SC);
 \(                  return(LP);
 \)                  return(RP);
