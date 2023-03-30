@@ -16,7 +16,7 @@ bool x, y, z, k, l;
 print("Enter the values of  x, y, z: ");
 input(x, y, z);
 
-k = foo(x, y, z)
+k = foo(x, y, z);
 
 if k {
 	l = x -> z;
