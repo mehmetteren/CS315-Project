@@ -7,16 +7,15 @@ all: parser clean
 
 parser: y.tab.o lex.yy.o
 	$(CC) -o parser y.tab.o lex.yy.o
-	./parser < test.txt
 
 lex.yy.o: lex.yy.c y.tab.h
 lex.yy.o y.tab.o: y.tab.c
 
-y.tab.c y.tab.h: y.y
-	$(YACC) -v y.y
+y.tab.c y.tab.h: CS315_S23_Team10.y
+	$(YACC) -v CS315_S23_Team10.y
 
-lex.yy.c: lex.l
-	$(LEX) lex.l
+lex.yy.c: CS315_S23_Team10.lex
+	$(LEX) CS315_S23_Team10.lex
 
 clean:
-	-rm -f *.o lex.yy.c *.tab.* parser *.output
+	-rm -f *.o lex.yy.c *.tab.* *.output
