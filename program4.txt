@@ -1,5 +1,5 @@
 begin;
-# Program 4
+# Test Program 4
 bool a;
 bool b;
 bool c;
