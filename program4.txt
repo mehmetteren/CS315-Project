@@ -1,5 +1,6 @@
 begin;
-# Test Program 4
+# Program 4
+
 bool a;
 bool b;
 bool c;
@@ -17,4 +18,6 @@ while(a){
     } else { a = false;}
 }
 print("All doors are now open!");
+
 end;
+

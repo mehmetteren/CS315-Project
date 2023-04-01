@@ -1,9 +1,10 @@
 begin;
-# Test Program3
+# Program3 - incorrect syntax
 
 func bool foo( a, b, c) {
 	while a <-> b {
-		if (b double-implies  c) {
+		# here, "double implies" keyword is wrong, should be double-implies
+		if (b double implies  c) {
 			c = !c;
 		} else {
 			b = !b;

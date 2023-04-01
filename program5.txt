@@ -1,8 +1,8 @@
 begin;
 # Test Program 5
+
 bool a, b;
-bool arr[];
-arr = [ a, b, a and b, a or b, a implies b, a double-implies b];
+bool[] arr = [ a, b, a and b, a or b, a implies b, a double-implies b];
 
 
 for each item in arr {
@@ -10,8 +10,8 @@ if (item -> true) {
 	result = !( a &&  b) <-> item;
 	print("result is: ", result);
 } else {
-	result = b || item ;
+	result = b ||  item;
+	print("result is: ", result);
 }
-print("result is: ", result);
 }
 end;
