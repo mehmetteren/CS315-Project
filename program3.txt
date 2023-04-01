@@ -1,5 +1,5 @@
 begin;
-# Program3
+# Test Program3
 
 func bool foo( a, b, c) {
 	while a <-> b {
