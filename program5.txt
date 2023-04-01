@@ -1,5 +1,5 @@
 begin;
-#test program 1
+#test program 5
 bool a, b;
 bool arr[];
 arr = [ a, b, a and b, a or b, a implies b, a double-implies b];
