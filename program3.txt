@@ -1,9 +1,5 @@
 begin;
-<<<<<<< Updated upstream
-# Test Program3
-=======
 # Program3 - incorrect syntax
->>>>>>> Stashed changes
 
 func bool foo( a, b, c) {
 	while a <-> b {
