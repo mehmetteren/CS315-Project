@@ -1,5 +1,9 @@
 begin;
+<<<<<<< Updated upstream
 # Test Program 5
+=======
+#test program 1
+>>>>>>> Stashed changes
 bool a, b;
 bool arr[];
 arr = [ a, b, a and b, a or b, a implies b, a double-implies b];
@@ -10,8 +14,16 @@ if (item -> true) {
 	result = !( a &&  b) <-> item;
 	print("result is: ", result);
 } else {
+<<<<<<< Updated upstream
 	result = b || item ;
 }
 print("result is: ", result);
 }
 end;
+=======
+	result = b ||  item;
+	print("result is: ", result);
+}
+}
+end;
+>>>>>>> Stashed changes

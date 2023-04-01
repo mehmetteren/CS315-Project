@@ -1,5 +1,9 @@
 begin;
+<<<<<<< Updated upstream
 # Test Program 4
+=======
+# Program 4
+>>>>>>> Stashed changes
 bool a;
 bool b;
 bool c;
@@ -17,4 +21,8 @@ while(a){
     } else { a = false;}
 }
 print("All doors are now open!");
+<<<<<<< Updated upstream
 end;
+=======
+end;
+>>>>>>> Stashed changes

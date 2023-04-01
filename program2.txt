@@ -1,5 +1,5 @@
 begin;
-# Program 2
+# Program 2 - incorrect syntax
 func void foo(p, q, r) {
 	bool result;
 
@@ -9,7 +9,8 @@ func void foo(p, q, r) {
 	print(“r: ”, r);
 
 	if r {
-		result = p -> (q or r);
+		# here, equal operator is used instead of assignment: 
+		result == p -> (q or r);
 	} else {
 		result = q <-> r;
     }
