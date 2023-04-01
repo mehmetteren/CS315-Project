@@ -36,17 +36,18 @@ end_statement:	BREAK SC
 	|	RETURN array SC
 
 /* DECLARATION & ASSIGNMENT*/
-declaration:	BOOL_TYPE variable_list SC // BOOL means "true" or "false", does not mean "bool"
-	|	BOOL_TYPE assignment
-	|	BOOL_TYPE variable_name LSB RSB SC
+declaration:	BOOL_TYPE variable_list SC
+	|	BOOL_TYPE bool_assignment
+	|	BOOL_TYPE LSB RSB VAR SC
+	|	BOOL_TYPE LSB RSB array_assignment
 	|	function_declaration
 
 assignment:	bool_assignment
 	|	array_assignment
 
-bool_assignment:	variable_name ASSIGN bool_expression SC
+bool_assignment:	VAR ASSIGN bool_expression SC
 
-array_assignment:	variable_name ASSIGN array SC
+array_assignment:	VAR ASSIGN array SC
 
 /* EXPRESSIONS */ 
 bool_expressions:	bool_expression 
@@ -62,7 +63,7 @@ bool_factor:	bool_secondary
 bool_secondary:	bool_primary
 	|	bool_primary AND_OP bool_secondary
 bool_primary:	BOOL
-	|	variable_name
+	|	VAR
 	|	NOT bool_primary
 	|	LP bool_expression RP
 	|	function_call
@@ -80,16 +81,17 @@ else_statement:		ELSE LCB statement_list RCB
 /* LOOPS */
 loop_statement:		while_loop | foreach_loop
 while_loop:		WHILE bool_expression LCB statement_list RCB
-foreach_loop:		FOR_EACH variable_name IN variable_name LCB statement_list RCB
-		|	FOR_EACH variable_name IN array LCB statement_list RCB
-// function_name is replaced with VAR since they are the same
+foreach_loop:		FOR_EACH VAR IN VAR LCB statement_list RCB
+		|	FOR_EACH VAR IN array LCB statement_list RCB
+
 /* FUNCTION */
-function_declaration:	bool_function | void_function
-bool_function:		function_identifier BOOL_TYPE function_signature LCB statement_list RCB
-void_function:		function_identifier VOID_TYPE function_signature LCB statement_list RCB
+function_declaration:	bool_function | void_function | array_function
+bool_function:		FUNC BOOL_TYPE function_signature LCB statement_list RCB
+array_function:		FUNC BOOL_TYPE LSB RSB function_signature LCB statement_list RCB
+void_function:		FUNC VOID_TYPE function_signature LCB statement_list RCB
 function_signature:	VAR LP variable_list RP
-function_call:		VAR LP bool_expressions RP //potential conflict with function_signature?
-variable_list:		variable_name | variable_name COMMA variable_list 
+function_call:		VAR LP bool_expressions RP
+variable_list:		VAR | VAR COMMA variable_list 
 
 
 /* INPUT OUTPUT STATEMENTS */
@@ -98,11 +100,6 @@ output_statement:	PRINT LP print_content RP SC
 print_content:		STRING_CONSTANT | bool_expression
 				|	print_content COMMA STRING_CONSTANT
 				|	print_content COMMA bool_expression
-
-
-/* SYMBOLS */
-variable_name: VAR
-function_identifier: FUNC
 
 %%
 int lineno;
