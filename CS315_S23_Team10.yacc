@@ -1,10 +1,10 @@
 %{
     #include "stdio.h"
     #include <stdlib.h>
-    void yyerror(char *);
     extern int yylineno;
     #include "y.tab.h"
 	int yylex(void);
+	int error_exist;
 %}
 %token BGN END RETURN BREAK BOOL ASSIGN PIPE BOOL_TYPE VOID_TYPE
 %token SC LP RP LCB RCB LSB RSB COLON PERCENT COMMA DOT DOLLAR AMPERSAND LB RB
@@ -16,7 +16,7 @@
 
 /* INITIAL PROGRAM */
 program:
-	BGN SC statement_list END SC {printf("\rProgram is valid.\n");};
+	BGN SC statement_list END SC {if(!error_exist){ printf("\rProgram is valid.\n");}};
 
 statement_list:	statement
 	|	statement statement_list
@@ -104,7 +104,8 @@ print_content:		STRING_CONSTANT | bool_expression
 
 %%
 int lineno;
-void yyerror(char *s) { fprintf(stderr,"%s on line %d!\n",s, yylineno); };
+int yyerror(char *s) { fprintf(stderr,"%s on line %d!\n",s, yylineno);
+error_exist = 1;};
 int main() {
 	return yyparse();
 }

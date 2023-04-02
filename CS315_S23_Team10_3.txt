@@ -25,5 +25,5 @@ if k {
 } else if {
 l = (x <-> z) && (x || y);
 	print("the value of l is: ", l);
-}
+} # error it does not recognize the } because of else if error
 end;
