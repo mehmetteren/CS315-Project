@@ -30,6 +30,7 @@ statement:	declaration
 	|	function_call SC
 	|	COMMENT
 	|	end_statement
+	|	error SC
 
 end_statement:	BREAK SC
 	|	RETURN bool_expression SC

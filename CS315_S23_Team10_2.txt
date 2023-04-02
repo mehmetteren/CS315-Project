@@ -9,8 +9,6 @@ func void foo(p, q, r) {
 	print(“r: ”, r);
 
 	if r {
-		# here, equal operator is used instead of assignment: 
-		result == p -> (q or r);
 	} else {
 		result = q <-> r;
     }
@@ -25,4 +23,8 @@ for each a in [true, false] {
 		print(“c: ”, c);
 	}
 }
+# here, equal operator is used instead of assignment: 
+		result == p -> (q or r);
+		# here, equal operator is used instead of assignment: 
+		result == p -> (q or r);
 end;
